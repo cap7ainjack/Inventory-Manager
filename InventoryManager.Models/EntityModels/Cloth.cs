@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
 
-    [Authorize(Roles = "Admin")]
     public class Cloth
     {
         public int ClothId { get; set; }

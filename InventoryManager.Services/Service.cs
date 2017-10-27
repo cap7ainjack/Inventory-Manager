@@ -1,14 +1,21 @@
 ﻿namespace InventoryManager.Services
 {
+    using InventoryManager.Data.Interfaces;
     using InventoryManager.Data;
 
     public abstract class Service
     {
+        protected IInventoryManagerData Data;
+
         public Service()
         {
-            this.Context = new InventoryManagerContext();
+            this.Data = new InventoryManagerData();
         }
 
-        protected InventoryManagerContext Context { get; }
+        public Service(IInventoryManagerData data)
+        {
+            this.Data = data;
+        }
+
     }
 }

@@ -30,5 +30,12 @@ namespace InventoryManager.Web.Controllers
             //return View(cloth);
             return this.RedirectToAction("Index", "Home");
         }
+
+        public ActionResult Details(int id)
+        {
+            var viewModel = this.service.GetClothDetails(id);
+
+            return View(viewModel);
+        }
     }
 }

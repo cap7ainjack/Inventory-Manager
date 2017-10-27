@@ -11,7 +11,7 @@
     {
         public IEnumerable<ClothForIndexVM> GetAllClothes(string sortingFilter)
         {
-            IEnumerable<Cloth> clothes = this.Context.Clothes.ToArray();
+            IEnumerable<Cloth> clothes = this.Data.Clothes.All() ;
 
             ICollection<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
 

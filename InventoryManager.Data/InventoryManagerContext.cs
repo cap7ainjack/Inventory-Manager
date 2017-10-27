@@ -12,7 +12,7 @@ namespace InventoryManager.Data
         {
         }
 
-        public virtual DbSet<Cloth> Clothes { get; set; }
+        public virtual IDbSet<Cloth> Clothes { get; set; }
 
         public static InventoryManagerContext Create()
         {

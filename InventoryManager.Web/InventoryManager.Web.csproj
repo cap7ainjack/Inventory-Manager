@@ -278,6 +278,7 @@
     <Content Include="Views\Cloth\Add.cshtml" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Views\Cloth\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InventoryManager.Data\InventoryManager.Data.csproj">
