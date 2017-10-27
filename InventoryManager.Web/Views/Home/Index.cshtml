@@ -1,0 +1,102 @@
+﻿@model IEnumerable<InventoryManager.Models.ViewModels.Cloth.ClothForIndexVM>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-4">
+            @Html.ActionLink("+ Add new", "Add", "Cloth", null, new { @class = "btn btn-default btn-block", @type = "button" })
+
+        </div>
+
+        <div class="col-sm-5">
+        </div>
+
+        <div class="col-sm-1" style="text-align:center;">
+            <p style="margin-top:6px; margin-left:17px">Sort By:</p>
+        </div>
+
+        <div class="col-sm-2" style="">
+
+            <div class="dropdown">
+                <button class="btn" type="button" data-toggle="dropdown">
+                    Name - Ascending
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        @Html.ActionLink("Name - Ascending", "Index", "Home", new { order = "Name-Ascending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Name - Descending", "Index", "Home", new { order = "Name-Descending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Price - Ascending", "Index", "Home", new { order = "Price-Ascending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Price - Descending", "Index", "Home", new { order = "Price-Descending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Quantity - Ascending", "Index", "Home", new { order = "Quantity-Ascending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Quantity - Descending", "Index", "Home", new { order = "Quantity-Descending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Type - Ascending", "Index", "Home", new { order = "Type-Ascending" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Type - Descending", "Index", "Home", new { order = "Type-Descending" }, null)
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <br />
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var vm in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => vm.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => vm.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => vm.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => vm.Quantity)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", "Cloth", null, new { id = vm.ClothId, @class = "btn btn-info" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

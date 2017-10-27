@@ -1,0 +1,64 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\obj\Debug\InventoryManager.Services.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Services.dll.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Services.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Services.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Data.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Models.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Microsoft.Owin.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Owin.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Data.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Data.dll.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Models.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\InventoryManager.Models.dll.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\Microsoft.Owin.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\obj\Debug\InventoryManager.Services.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\obj\Debug\InventoryManager.Services.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\InventoryManager\InventoryManager.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Services.dll.config
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Services.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Services.pdb
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Data.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Models.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Microsoft.Owin.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Owin.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Data.pdb
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Data.dll.config
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Models.pdb
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\InventoryManager.Models.dll.config
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\Microsoft.Owin.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\obj\Debug\InventoryManager.Services.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\obj\Debug\InventoryManager.Services.dll
+C:\Users\user\Desktop\InventoryManagerApp\InventoryManager.Services\obj\Debug\InventoryManager.Services.pdb
