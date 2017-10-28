@@ -3,6 +3,7 @@
     using InventoryManager.Models.EntityModels;
     using InventoryManager.Models.ViewModels.Cloth;
     using System.Linq;
+    using System;
 
     public class ClothService : Service
     {
@@ -10,6 +11,12 @@
         {
             this.Data.Clothes.Add(newCloth);
             this.Data.SaveChanges();
+        }
+
+        public Cloth GetClothForById(int id)
+        {
+            Cloth cloth = this.Data.Clothes.GetById(id);
+            return cloth;
         }
 
         public ClothDetailsViewModel GetClothDetails(int id)
@@ -29,6 +36,20 @@
                 }).FirstOrDefault();
 
             return result;
+        }
+
+        public void ModifyCloth(Cloth cloth)
+        {
+            this.Data.Clothes.Update(cloth);
+            //this.Data.Entry(cloth).State = EntityState.Modified;
+            this.Data.SaveChanges();
+        }
+
+        public void DeleteCloth(int id)
+        {
+            Cloth laptop = this.Data.Clothes.GetById(id);
+            this.Data.Clothes.Delete(laptop);
+            this.Data.SaveChanges();
         }
     }
 }

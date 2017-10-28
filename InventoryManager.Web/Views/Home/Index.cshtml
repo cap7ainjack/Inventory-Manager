@@ -9,7 +9,11 @@
 
     <div class="row">
         <div class="col-sm-4">
-            @Html.ActionLink("+ Add new", "Add", "Cloth", null, new { @class = "btn btn-default btn-block", @type = "button" })
+            @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("+ Add new", "Add", "ClothAdmin", null, new { @class = "btn btn-default btn-block", @type = "button" })
+
+            }
 
         </div>
 
@@ -93,7 +97,9 @@
                     @Html.DisplayFor(modelItem => vm.Quantity)
                 </td>
                 <td>
-                    @Html.ActionLink("Details", "Details", "Cloth", null, new { id = vm.ClothId, @class = "btn btn-info" })
+                  @* @Html.ActionLink("Details", "Details", "Cloth", null, new { id = vm.ClothId, @class = "btn btn-info" })*@
+                    <p><a class="btn btn-info" href="@Url.Action("Details", "Cloth", new { vm.ClothId })">Details </a></p>
+                  
                 </td>
             </tr>
         }
