@@ -4,8 +4,9 @@
     using InventoryManager.Models.ViewModels.Cloth;
     using System.Linq;
     using System;
+    using InventoryManager.Services.Interfaces;
 
-    public class ClothService : Service
+    public class ClothService : Service, IClothService
     {
         public void AddNewCloth(Cloth newCloth)
         {
@@ -51,5 +52,6 @@
             this.Data.Clothes.Delete(laptop);
             this.Data.SaveChanges();
         }
+
     }
 }

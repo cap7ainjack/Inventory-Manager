@@ -1,26 +1,38 @@
 ﻿namespace InventoryManager.Services
 {
+    using InventoryManager.Data.Interfaces;
     using InventoryManager.Models.EntityModels;
     using InventoryManager.Models.ViewModels.Cloth;
+    using InventoryManager.Services.Interfaces;
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
-    public class HomeService : Service
+    public class HomeService : Service, IHomeService
     {
+        public HomeService(IInventoryManagerData data)
+        {
+            this.Data = data;
+        }
+
+        public HomeService()
+        {
+            
+        }
+
         public IEnumerable<ClothForIndexVM> GetAllClothes(string sortingFilter)
         {
-            IEnumerable<Cloth> clothes = this.Data.Clothes.All() ;
+            IQueryable<Cloth> clothes = this.Data.Clothes.All();
 
-            ICollection<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
+            IEnumerable<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
 
-            ICollection<ClothForIndexVM> sortedClothesVM = SortByInput(sortingFilter, clothesVM);
+            IEnumerable<ClothForIndexVM> sortedClothesVM = SortByInput(sortingFilter, clothesVM);
 
             return sortedClothesVM;
         }
 
-        private ICollection<ClothForIndexVM> SortByInput(string sortingFilter, ICollection<ClothForIndexVM> clothesVM)
+        private IEnumerable<ClothForIndexVM> SortByInput(string sortingFilter, IEnumerable<ClothForIndexVM> clothesVM)
         {
             //exmp Name-Ascending
             string propFilter = sortingFilter.Substring(0, sortingFilter.IndexOf('-'));
@@ -34,7 +46,7 @@
             return clothesVM.OrderByDescending(x => x.GetType().GetProperty(propFilter).GetValue(x, null)).ToArray();
         }
 
-        private ICollection<ClothForIndexVM> MapEntityToViewModels(IEnumerable<Cloth> clothes)
+        private IEnumerable<ClothForIndexVM> MapEntityToViewModels(IEnumerable<Cloth> clothes)
         {
            ICollection<ClothForIndexVM> clothesVM = new HashSet<ClothForIndexVM>();
 
@@ -49,6 +61,15 @@
                     Price = cloth.Price
                 });
             }
+
+            return clothesVM;
+        }
+
+        public IEnumerable<ClothForIndexVM> GetSearchedResults(string name)
+        {
+            IQueryable<Cloth> clothes = this.Data.Clothes.All().Where(x => x.Name.Contains(name));
+
+            IEnumerable<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
 
             return clothesVM;
         }

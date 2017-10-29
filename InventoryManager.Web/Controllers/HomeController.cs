@@ -2,12 +2,24 @@
 {
     using InventoryManager.Models.ViewModels.Cloth;
     using InventoryManager.Services;
+    using InventoryManager.Services.Interfaces;
     using System.Collections.Generic;
     using System.Web.Mvc;
 
     public class HomeController : Controller
     {
-        private HomeService service = new HomeService();
+        private IHomeService service;
+
+        public HomeController()
+            : this(new HomeService())
+        {
+            
+        }
+
+        public HomeController(IHomeService service)
+        {
+            this.service = service;
+        }
 
         public ActionResult Index(string order = "Name-Ascending")
         {
@@ -28,6 +40,15 @@
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        // POST/GET: /Home/Search
+        [HttpPost]
+        public ActionResult Search(string name = "")
+        {
+
+            var model = this.service.GetSearchedResults(name);
+            return View("Index",model);
         }
     }
 }

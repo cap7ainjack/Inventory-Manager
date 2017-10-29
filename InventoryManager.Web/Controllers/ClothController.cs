@@ -1,14 +1,26 @@
 ﻿namespace InventoryManager.Web.Controllers
 {
     using InventoryManager.Services;
+    using InventoryManager.Services.Interfaces;
     using System.Net;
     using System.Web.Mvc;
 
     [Authorize]
     public class ClothController : Controller
     {
-        private ClothService service = new ClothService();
+        private IClothService service;
 
+        public ClothController()
+            : this(new ClothService())
+        {
+
+        }
+
+        public ClothController(IClothService service)
+        {
+            this.service = service;
+        }
+    
         public ActionResult Details(int? ClothId)
         {
             if (ClothId == null)
@@ -19,5 +31,6 @@
 
             return View(viewModel);
         }
+
     }
 }
