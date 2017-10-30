@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "_Search";
+}
+
+<form method="post" action="/Home/Search" class="navbar-form navbar-right">
+    <fieldset>
+        <div class="editor-field">
+            <input class="form-control" type="text" name="name" placeholder="Search..."
+                   id="name" value="" />
+
+               @* <input class="btn btn-default" type="submit" value="Go" />*@
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+
+        </div>
+ 
+    </fieldset>
+</form>
+

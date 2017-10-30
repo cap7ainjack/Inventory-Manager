@@ -1,0 +1,88 @@
+﻿@model InventoryManager.Models.ViewModels.Cloth.ClothDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Name</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <hr />
+            <dl class="dl-horizontal">
+                <dd>
+                    <img src="@Model.PictureUrl" width="300px" height="355px" />
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-6">
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Size)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Size)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Type)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Type)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descripton)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Descripton)
+                </dd>
+
+                <dd>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </dd>
+
+
+                <dd>
+                    @Html.ActionLink("Edit", "Edit", "ClothAdmin", new { id = Model.ClothId }, new { @class = "btn btn-success", @type = "button" })
+                @Html.ActionLink("Delete", "Delete", "ClothAdmin", new { id = Model.ClothId }, new { @class = "btn btn-danger", @type = "button" })
+                </dd>
+            </dl>
+
+</div>
+    </div>
+</div>
+<p>
+    <br />
+    <br />
+    @Html.ActionLink("Back to List", "Index", "Home")
+</p>
