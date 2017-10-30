@@ -12,13 +12,14 @@
     public class HomeService : Service, IHomeService
     {
         public HomeService(IInventoryManagerData data)
+            :base(data)
         {
             this.Data = data;
         }
 
         public HomeService()
         {
-            
+
         }
 
         public IEnumerable<ClothForIndexVM> GetAllClothes(string sortingFilter)

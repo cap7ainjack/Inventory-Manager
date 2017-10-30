@@ -46,7 +46,6 @@
         [HttpPost]
         public ActionResult Search(string name = "")
         {
-
             var model = this.service.GetSearchedResults(name);
             return View("Index",model);
         }

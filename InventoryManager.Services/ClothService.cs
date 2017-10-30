@@ -5,9 +5,21 @@
     using System.Linq;
     using System;
     using InventoryManager.Services.Interfaces;
+    using InventoryManager.Data.Interfaces;
 
     public class ClothService : Service, IClothService
     {
+        public ClothService(IInventoryManagerData data)
+            :base(data)
+        {
+            this.Data = data;
+        }
+
+        public ClothService()
+        {
+
+        }
+
         public void AddNewCloth(Cloth newCloth)
         {
             this.Data.Clothes.Add(newCloth);
