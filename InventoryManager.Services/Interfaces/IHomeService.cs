@@ -10,7 +10,7 @@ namespace InventoryManager.Services.Interfaces
 {
     public interface IHomeService
     {
-        IEnumerable<ClothForIndexVM> GetAllClothes(string sortingFilter);
-        IEnumerable<ClothForIndexVM> GetSearchedResults(string name);
+        IEnumerable<Cloth> GetAllClothes(string sortingFilter);
+        IEnumerable<Cloth> GetSearchedResults(string name);
     }
 }

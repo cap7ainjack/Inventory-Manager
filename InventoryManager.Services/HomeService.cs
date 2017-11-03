@@ -12,7 +12,7 @@
     public class HomeService : Service, IHomeService
     {
         public HomeService(IInventoryManagerData data)
-            :base(data)
+            : base(data)
         {
             this.Data = data;
         }
@@ -22,18 +22,15 @@
 
         }
 
-        public IEnumerable<ClothForIndexVM> GetAllClothes(string sortingFilter)
+        public IEnumerable<Cloth> GetAllClothes(string sortingFilter)
         {
             IQueryable<Cloth> clothes = this.Data.Clothes.All();
-
-            IEnumerable<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
-
-            IEnumerable<ClothForIndexVM> sortedClothesVM = SortByInput(sortingFilter, clothesVM);
+            IEnumerable<Cloth> sortedClothesVM = SortByInput(sortingFilter, clothes);
 
             return sortedClothesVM;
         }
 
-        private IEnumerable<ClothForIndexVM> SortByInput(string sortingFilter, IEnumerable<ClothForIndexVM> clothesVM)
+        private IEnumerable<Cloth> SortByInput(string sortingFilter, IEnumerable<Cloth> clothes)
         {
             //exmp Name-Ascending
             string propFilter = sortingFilter.Substring(0, sortingFilter.IndexOf('-'));
@@ -41,38 +38,16 @@
 
             if (order == "Ascending")
             {
-               return clothesVM.OrderBy(x => x.GetType().GetProperty(propFilter).GetValue(x, null)).ToArray();
+                return clothes.OrderBy(x => x.GetType().GetProperty(propFilter).GetValue(x, null)).ToArray();
             }
 
-            return clothesVM.OrderByDescending(x => x.GetType().GetProperty(propFilter).GetValue(x, null)).ToArray();
+            return clothes.OrderByDescending(x => x.GetType().GetProperty(propFilter).GetValue(x, null)).ToArray();
         }
 
-        private IEnumerable<ClothForIndexVM> MapEntityToViewModels(IEnumerable<Cloth> clothes)
-        {
-           ICollection<ClothForIndexVM> clothesVM = new HashSet<ClothForIndexVM>();
-
-            foreach (var cloth in clothes)
-            {
-                clothesVM.Add(new ClothForIndexVM
-                {
-                    ClothId = cloth.ClothId,
-                    Name = cloth.Name,
-                    Type = cloth.Type,
-                    Quantity = cloth.Quantity,
-                    Price = cloth.Price
-                });
-            }
-
-            return clothesVM;
-        }
-
-        public IEnumerable<ClothForIndexVM> GetSearchedResults(string name)
+        public IEnumerable<Cloth> GetSearchedResults(string name)
         {
             IQueryable<Cloth> clothes = this.Data.Clothes.All().Where(x => x.Name.Contains(name));
-
-            IEnumerable<ClothForIndexVM> clothesVM = MapEntityToViewModels(clothes);
-
-            return clothesVM;
+            return clothes;
         }
     }
 }

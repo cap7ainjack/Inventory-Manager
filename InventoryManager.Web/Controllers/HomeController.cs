@@ -1,5 +1,6 @@
 ﻿namespace InventoryManager.Web.Controllers
 {
+    using InventoryManager.Models.EntityModels;
     using InventoryManager.Models.ViewModels.Cloth;
     using InventoryManager.Services;
     using InventoryManager.Services.Interfaces;
@@ -13,7 +14,7 @@
         public HomeController()
             : this(new HomeService())
         {
-            
+
         }
 
         public HomeController(IHomeService service)
@@ -23,9 +24,10 @@
 
         public ActionResult Index(string order = "Name-Ascending")
         {
-            IEnumerable<ClothForIndexVM> allClothes = this.service.GetAllClothes(order);
+            IEnumerable<Cloth> allClothes = this.service.GetAllClothes(order);
+            IEnumerable<ClothForIndexVM> allClothesVM = MapEntityToViewModels(allClothes);
 
-            return View(allClothes);
+            return View(allClothesVM);
         }
 
         public ActionResult About()
@@ -47,7 +49,27 @@
         public ActionResult Search(string name = "")
         {
             var model = this.service.GetSearchedResults(name);
-            return View("Index",model);
+            IEnumerable<ClothForIndexVM> clothesVM = MapEntityToViewModels(model);
+            return View("Index", clothesVM);
+        }
+
+        private IEnumerable<ClothForIndexVM> MapEntityToViewModels(IEnumerable<Cloth> clothes)
+        {
+            ICollection<ClothForIndexVM> clothesVM = new HashSet<ClothForIndexVM>();
+
+            foreach (var cloth in clothes)
+            {
+                clothesVM.Add(new ClothForIndexVM
+                {
+                    ClothId = cloth.ClothId,
+                    Name = cloth.Name,
+                    Type = cloth.Type,
+                    Quantity = cloth.Quantity,
+                    Price = cloth.Price
+                });
+            }
+
+            return clothesVM;
         }
     }
 }

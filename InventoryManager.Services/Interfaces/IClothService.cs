@@ -14,7 +14,7 @@ namespace InventoryManager.Services.Interfaces
 
         Cloth GetClothForById(int id);
 
-        ClothDetailsViewModel GetClothDetails(int id);
+        Cloth GetClothDetails(int id);
 
         void ModifyCloth(Cloth cloth);
 

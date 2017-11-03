@@ -10,7 +10,7 @@
     public class ClothService : Service, IClothService
     {
         public ClothService(IInventoryManagerData data)
-            :base(data)
+            : base(data)
         {
             this.Data = data;
         }
@@ -32,11 +32,11 @@
             return cloth;
         }
 
-        public ClothDetailsViewModel GetClothDetails(int id)
+        public Cloth GetClothDetails(int id)
         {
-            ClothDetailsViewModel result = this.Data.Clothes.All()
+            Cloth result = this.Data.Clothes.All()
                 .Where(x => x.ClothId == id)
-                .Select(x => new ClothDetailsViewModel
+                .Select(x => new Cloth
                 {
                     ClothId = x.ClothId,
                     Name = x.Name,
